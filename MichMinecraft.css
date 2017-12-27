@@ -1,0 +1,42 @@
+
+
+.tile {
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	display: inline-block;
+	margin-bottom: -5px;
+}
+
+#mainBoard {
+	height: 700px;
+	width: 1020px;
+}
+
+.skyblue {
+	background: #87CEFA;
+}
+
+.cloud {
+	background: white;
+}
+
+.dirt {
+	background-image: url("dirt.jpg");
+}
+
+.dirtWithGrass {
+	background-image: url("grass.jpg");
+}
+
+.justGrass {
+	background-image: url("grassnodirt.png");
+}
+
+.treeBark {
+	background-image: url("bark.jpg");
+}
+
+.treeLeaf {
+	background-image: url("leaf.png");
+}
