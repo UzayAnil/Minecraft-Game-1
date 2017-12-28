@@ -21,27 +21,20 @@ mineCraft.createBoard = function () {
 				box.addClass("dirtWithGrass");
 				
 			}
-			
+			//adding tree bark
 			else if ((x === 13&&y===16) || (x === 12&&y===16) || (x === 11&&y===16)) {
 				box.removeClass("skyblue");
 				box.addClass("treeBark");
 			}
-
+			//adding tree leaves
 			else if ((x === 8 && y===17)|| (x===10 && y === 17) || (x === 9 && y===17) || (x === 10 && y===15)||(x === 8 && y===15)||(x === 9 && y===15)
 			||(x === 8 && y===15)||(x === 8 && y===16)||(x === 9 && y===16)||(x === 10&&y===16)) {
 				box.removeClass("skyblue");
 				box.addClass("treeLeaf");
 
 			}
-
-
-
-
-
-
-
-			else if((x==5&&y==4)||(x==5&&y==5) ||(x==5&&y==6) || (x==5&&y==7)|| (x==5&&y==8) || (x==4&&y==5) || (x==4&&y==6) || (x==4&&y==7)||(x==6&&y==6)||(x==6&&y==5)||(x==6&&y==7)){
-			} else if((x===4&&y===4)||(x===4&&y===5) ||(x===4&&y===6) || (x===4&&y===7)|| (x===4&&y===8) || (x===3&&y===5) || (x===3&&y===6) || (x===3&&y===7)||(x===5&&y===6)||(x===5&&y===5)||(x===5&&y===7)){
+			//adding the cloud
+			else if((x===4&&y===4)||(x===4&&y===5) ||(x===4&&y===6) || (x===4&&y===7)|| (x===4&&y===8) || (x===3&&y===5) || (x===3&&y===6) || (x===3&&y===7)||(x===5&&y===6)||(x===5&&y===5)||(x===5&&y===7)){
 				box.removeClass("skyblue");
 				box.addClass("cloud");
 			}
@@ -61,7 +54,6 @@ mineCraft.createBoard = function () {
 	}
 
 };
-
 
 $(document).ready(function () {
 	mineCraft.init();
