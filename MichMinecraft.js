@@ -14,7 +14,6 @@ var colorIndicator = $("<div/>")
 .addClass("box skyblue backgroundIndicator")
 $(".col-lg-3").append(colorIndicator);
 
-
 mineCraft.createBoard = function () {
 	mineCraft.matrix = new Array(21);
 	for (var i = 0; i < mineCraft.matrix.length; i++) {
