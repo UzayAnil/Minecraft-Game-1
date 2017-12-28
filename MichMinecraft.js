@@ -1,11 +1,15 @@
 var mineCraft = {};
 
+
+($(".tool")).click(function(){
+	console.log("Hello!");
+})
+
 mineCraft.init = function () {
 	mineCraft.createBoard();
 }
 
 mineCraft.createBoard = function () {
-
 	mineCraft.matrix = new Array(21);
 	for (var i = 0; i < mineCraft.matrix.length; i++) {
 		mineCraft.matrix[i] = new Array(21);
