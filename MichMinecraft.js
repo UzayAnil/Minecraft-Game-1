@@ -37,8 +37,13 @@ mineCraft.createBoard = function () {
 			||(x === 8 && y===15)||(x === 8 && y===16)||(x === 9 && y===16)||(x === 10&&y===16)) {
 				box.removeClass("skyblue");
 				box.addClass("treeLeaf");
-
 			}
+			//adding bush
+			else if((x===13&&y===1) || (x===13&&y===2)||(x===13&&y===3)||(x===13&&y===4)||(x===12&&y===2)||(x===12&&y===3)) {
+				box.removeClass("skyblue");
+				box.addClass("justGrass");
+			}
+
 			//adding the cloud
 			else if((x===4&&y===4)||(x===4&&y===5) ||(x===4&&y===6) || (x===4&&y===7)|| (x===4&&y===8) || (x===3&&y===5) || (x===3&&y===6) || (x===3&&y===7)||(x===5&&y===6)||(x===5&&y===5)||(x===5&&y===7)){
 				box.removeClass("skyblue");
