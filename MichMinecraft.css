@@ -2,7 +2,6 @@ body {
 	background: black;
 }
 
-
 .box {
 	height: 35px;
 	width: 35px;
@@ -25,12 +24,9 @@ body {
 	margin-top: 20px;
 }
 
-#backgroundIndicator {
-	height: 45px;
-	width: 45px;
-	background: #87CEFA;
-	margin-left: 40%;
-	border: 1px solid white;
+.backgroundIndicator {
+	border: 2px solid white;
+	margin-right: 14px;
 }
 
 .textToolBar {

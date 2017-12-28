@@ -4,6 +4,12 @@ mineCraft.init = function () {
 	mineCraft.createBoard();
 }
 
+//adding color indicator 
+var colorIndicator = $("<div/>")
+.addClass("box skyblue backgroundIndicator")
+$(".col-lg-3").append(colorIndicator);
+
+
 mineCraft.createBoard = function () {
 
 	mineCraft.matrix = new Array(21);
@@ -17,8 +23,7 @@ mineCraft.createBoard = function () {
 			var box = $("<div/>")
 				.addClass("box skyblue");
 			if (x==14){
-				box.addClass("dirtWithGrass");
-				
+				box.addClass("dirtWithGrass");		
 			}
 
 			//adding rocks
