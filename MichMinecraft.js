@@ -23,18 +23,15 @@ mineCraft.createBoard = function () {
 		}
 	}
 
+	//adding dirt
 	for (var i = 15; i < mineCraft.matrix.length; i++) {
 		for (var j = 0; j < mineCraft.matrix.length; j++) {
-
-		
 			mineCraft.matrix[i][j].removeClass("skyblue")
 			mineCraft.matrix[i][j].addClass("dirt");
-
-			
-			
-			console.log(box);
 		}
 	}
+
+	
 };
 
 
