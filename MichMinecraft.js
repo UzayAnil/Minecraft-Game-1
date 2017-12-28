@@ -1,12 +1,8 @@
 var mineCraft = {};
 
-
-
-
 mineCraft.init = function () {
 	mineCraft.createBoard();
 }
-
 
 mineCraft.createBoard = function () {
 
@@ -17,22 +13,35 @@ mineCraft.createBoard = function () {
 	}
 	console.log(mineCraft.matrix);
 
-		for (var x = 0; x < mineCraft.matrix.length; x++) {
-			for (var y = 0; y < mineCraft.matrix.length; y++) {
-				mineCraft.matrix[x][y] = "";
-				var box = $("<div/>")
-				.addClass("box")
-				$('#mainBoard').append(box);
+	for (var x = 0; x < mineCraft.matrix.length; x++) {
+		for (var y = 0; y < mineCraft.matrix.length; y++) {
+			var box = $("<div/>")
+				.addClass("box skyblue")
+			$('#mainBoard').append(box);
+
+			mineCraft.matrix[x][y] = box;
 		}
-			}
-	
-	
 	}
 
+	for (var i = 15; i < mineCraft.matrix.length; i++) {
+		for (var j = 0; j < mineCraft.matrix.length; j++) {
 
-$(document).ready(function() {
-    mineCraft.init();
+		
+			mineCraft.matrix[i][j].removeClass("skyblue")
+			mineCraft.matrix[i][j].addClass("dirt");
+
+			
+			
+			console.log(box);
+		}
+	}
+};
+
+
+$(document).ready(function () {
+	mineCraft.init();
 });
+
 
 
 

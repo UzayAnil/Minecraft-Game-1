@@ -7,6 +7,13 @@
 	margin-top: -5px;
 }
 
+.btn {
+	height: 50px;
+	width: 100px;
+	background: black;
+	color: white;
+}
+
 #mainBoard {
 	height: 650px;
 	width: 765px;
@@ -15,9 +22,10 @@
 }
 
 #backgroundIndicator {
-	height: 100px;
-	width: 100px;
+	height: 45px;
+	width: 45px;
 	background: #87CEFA;
+	margin-left: 42.5%;
 }
 
 .skyblue {
@@ -30,22 +38,27 @@
 
 .dirt {
 	background-image: url("dirt.jpg");
+	background-size: cover;
 }
 
 .dirtWithGrass {
 	background-image: url("grass.jpg");
+	background-size: cover;
 }
 
 .justGrass {
 	background-image: url("grassnodirt.png");
+	background-size: cover;
 }
 
 .treeBark {
 	background-image: url("bark.jpg");
+	background-size: cover;
 }
 
 .treeLeaf {
 	background-image: url("leaf.png");
+	background-size: cover;
 }
 
 
@@ -54,10 +67,14 @@
 }
 
 .item {
-	width: 30px;
-	height: 30px
+	width: 45px;
+	height: 45px
 }
 
 /* .inventoryBox {
-	float: right;
+	display:inline-block;
 } */
+
+.col-lg-3{
+	text-align: center;
+}
