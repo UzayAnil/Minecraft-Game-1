@@ -15,7 +15,14 @@ mineCraft.createBoard = function () {
 	for (var x = 0; x < mineCraft.matrix.length; x++) {
 		for (var y = 0; y < mineCraft.matrix.length; y++) {
 			var box = $("<div/>")
-				.addClass("box skyblue")
+				.addClass("box skyblue");
+			if (x==13){
+				box.removeClass("skyblue");
+				box.addClass("dirtWithGrass");
+			} else if(x==5&&y==5){
+				box.removeClass("skyblue");
+			}
+			box.on("click", whatever);
 			$('#mainBoard').append(box);
 
 			mineCraft.matrix[x][y] = box;
@@ -30,20 +37,17 @@ mineCraft.createBoard = function () {
 		}
 	}
 
-	for (var i = 13; i < mineCraft.matrix[14]; i++) {
-		for (var j = 0; j < mineCraft.matrix.length; j++) {
-			mineCraft.matrix[i][j].removeClass("skyblue")
-			mineCraft.matrix[i][j].addClass("dirtWithGrass");
-		}
-	}
-
-
 };
 
 
 $(document).ready(function () {
 	mineCraft.init();
+
 });
+
+whatever=function(){
+	console.log("whatever");
+}
 
 
 
