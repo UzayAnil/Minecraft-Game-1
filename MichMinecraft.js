@@ -17,30 +17,26 @@ mineCraft.createBoard = function () {
 			var box = $("<div/>")
 				.addClass("box skyblue");
 			if (x==14){
-				box.removeClass("skyblue");
 				box.addClass("dirtWithGrass");
 				
 			}
 
 			//adding rocks
 			else if ((x === 13 && y === 13) || (x === 13 && y === 14) || (x===13 && y ===20)) {
-				box.removeClass("skyblue");
 				box.addClass("rock");
 			}
 			//adding tree bark
 			else if ((x === 13&&y===16) || (x === 12&&y===16) || (x === 11&&y===16)) {
-				box.removeClass("skyblue");
 				box.addClass("treeBark");
 			}
 			//adding tree leaves
 			else if ((x === 8 && y===17)|| (x===10 && y === 17) || (x === 9 && y===17) || (x === 10 && y===15)||(x === 8 && y===15)||(x === 9 && y===15)
 			||(x === 8 && y===15)||(x === 8 && y===16)||(x === 9 && y===16)||(x === 10&&y===16)) {
-				box.removeClass("skyblue");
+	
 				box.addClass("treeLeaf");
 			}
 			//adding bush
 			else if((x===13&&y===1) || (x===13&&y===2)||(x===13&&y===3)||(x===13&&y===4)||(x===12&&y===2)||(x===12&&y===3)) {
-				box.removeClass("skyblue");
 				box.addClass("justGrass");
 			}
 
@@ -59,7 +55,6 @@ mineCraft.createBoard = function () {
 	//adding dirt
 	for (var i = 15; i < mineCraft.matrix.length; i++) {
 		for (var j = 0; j < mineCraft.matrix.length; j++) {
-			mineCraft.matrix[i][j].removeClass("skyblue")
 			mineCraft.matrix[i][j].addClass("dirt");
 		}
 	}
