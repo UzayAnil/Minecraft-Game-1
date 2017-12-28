@@ -1,16 +1,23 @@
 
-
-.tile {
-	height: 50px;
-	width: 50px;
+.box {
+	height: 35px;
+	width: 35px;
 	border: 1px solid black;
 	display: inline-block;
-	margin-bottom: -5px;
+	margin-top: -5px;
 }
 
 #mainBoard {
-	height: 700px;
-	width: 1020px;
+	height: 650px;
+	width: 765px;
+	/* border: 1px solid black; */
+	margin-top: 20px;
+}
+
+#backgroundIndicator {
+	height: 100px;
+	width: 100px;
+	background: #87CEFA;
 }
 
 .skyblue {
@@ -47,10 +54,10 @@
 }
 
 .item {
-	width: 50px;
-	height: 50px
+	width: 30px;
+	height: 30px
 }
 
-.inventoryBox {
+/* .inventoryBox {
 	float: right;
-}
+} */
