@@ -21,6 +21,12 @@ mineCraft.createBoard = function () {
 				box.addClass("dirtWithGrass");
 				
 			}
+
+			//adding rocks
+			else if ((x === 13 && y === 13) || (x === 13 && y === 14) || (x===13 && y ===20)) {
+				box.removeClass("skyblue");
+				box.addClass("rock");
+			}
 			//adding tree bark
 			else if ((x === 13&&y===16) || (x === 12&&y===16) || (x === 11&&y===16)) {
 				box.removeClass("skyblue");
