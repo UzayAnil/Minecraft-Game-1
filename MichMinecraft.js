@@ -7,6 +7,30 @@ var mineCraft = {};
 
 mineCraft.init = function () {
 	mineCraft.createBoard();
+	toolCreator();
+}
+
+
+var toolNames = ["pickaxe", "shovel", "axe"];
+var toolPics = ["Pickaxe.png", "Shovel.png", "Axe.png"];
+
+function toolCreator() {
+	for (var i=0; i < toolNames.length; i++) {
+		var div = $("<div/>");
+		div.addClass("tool" + toolNames[i]);
+		var image = $("<img/>");
+		image.attr("src", toolPics[i]);
+		div.append(image);
+		var toolText = $("<p/>");
+		toolText.text(toolNames[i]);
+		$("#tools").append(div);
+		div.append(toolText);
+		// div.click(toolClick);
+	}
+}
+
+function toolClick() {
+	console.log("Hello!");
 }
 
 //adding color indicator 
