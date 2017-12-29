@@ -17,15 +17,16 @@ var toolPics = ["Pickaxe.png", "Shovel.png", "Axe.png"];
 function toolCreator() {
 	for (var i=0; i < toolNames.length; i++) {
 		var div = $("<div/>");
-		div.addClass("tool" + toolNames[i]);
+		div.addClass("tool " + toolNames[i]);
 		var image = $("<img/>");
+		image.addClass("toolImage");
 		image.attr("src", toolPics[i]);
 		div.append(image);
 		var toolText = $("<p/>");
 		toolText.text(toolNames[i]);
 		$("#tools").append(div);
 		div.append(toolText);
-		// div.click(toolClick);
+		div.on("click", toolClick);
 	}
 }
 

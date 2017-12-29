@@ -83,3 +83,11 @@ body {
 .col-lg-3{
 	text-align: center;
 }
+
+.toolImage {
+	width: 50px;
+}
+
+.tool {
+	width: 50px;
+}
