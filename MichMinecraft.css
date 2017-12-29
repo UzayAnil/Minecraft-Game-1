@@ -73,11 +73,6 @@ body {
 	background-size: cover;
 }
 
-
-.inventory {
-	display: inline-block;
-}
-
 .item {
 	width: 45px;
 	height: 45px;
