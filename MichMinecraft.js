@@ -111,14 +111,19 @@ selectedDiv = function () {
 	var divSelected = $(this).attr("class");
 	console.log(divSelected);
 
-	// if (divSelected != 'skyblue') {
+	if (divSelected != 'box skyblue') {
 
 		if((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
 				$(this).removeClass('dirt');
 				console.log(divSelected);
 			}
 
-		// }
+			else if((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
+				$(this).removeClass('rock');
+				console.log(divSelected);
+			}
+
+		}
 
 }
 
