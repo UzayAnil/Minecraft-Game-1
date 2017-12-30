@@ -107,15 +107,6 @@ $(document).ready(function () {
 
 });
 
-// addDirt = function(){
-	// for (var x = 0; x < mineCraft.matrix.length; x++) {
-	// 	for (var y = 0; y < mineCraft.matrix.length; y++) {
-			// var x = $('div').position()
-			// console.log(x);
-			// x.addClass('dirt');
-	// 	}
-	// }
-// };
 
 selectedDiv = function () {
 	var divSelected = $(this).attr("class");
@@ -181,7 +172,6 @@ $("#tutorialBtn").click(function() {
 
 $("span").click(function() {
 	$('.modal').css("display", "none");
-
 })
 
 $("#startBtn").click(function() {
