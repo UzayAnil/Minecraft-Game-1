@@ -37,10 +37,11 @@ var hasTool;
 
 function toolClick() {
 	currentTool = $(this);
-	currentTool.css("background-color", "blue");
 	hasTool = currentTool.attr("class");
+	currentTool.toggleClass("toolBackgroundColor");
 	console.log(hasTool);
 }
+
 
 //adding color indicator 
 var colorIndicator = $("<div/>")
@@ -114,41 +115,41 @@ selectedDiv = function () {
 	if (divSelected != 'box skyblue') {
 
 		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {	
-			($('.backgroundIndicator').addClass('dirt'));
-			console.log($('.backgroundIndicator'));
+			// ($('.backgroundIndicator').data(divSelected));
+			// console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirt');
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
-			($('.backgroundIndicator').addClass('dirtWithGrass'));
-			console.log($('.backgroundIndicator'));
+			// ($('.backgroundIndicator').data(divSelected));
+			// console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
-			($('.backgroundIndicator').addClass('treeBark'));
+			($('.backgroundIndicator').data(divSelected));
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeBark');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
-			($('.backgroundIndicator').addClass('treeLeaf'));
+			($('.backgroundIndicator').data(divSelected));
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
-			($('.backgroundIndicator').addClass('rock'));
+			($('.backgroundIndicator').data(divSelected));
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('rock');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
-			($('.backgroundIndicator').addClass('justGrass'));
+			($('.backgroundIndicator').data(divSelected));
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('justGrass');
 			console.log(divSelected);

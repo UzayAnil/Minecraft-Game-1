@@ -19,6 +19,10 @@ body {
 	margin-top: 20px;
 }
 
+.toolBackgroundColor {
+	background: blue;
+}
+
 #mainBoard {
 	height: 650px;
 	width: 765px;
