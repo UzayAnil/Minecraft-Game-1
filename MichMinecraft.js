@@ -150,6 +150,8 @@ $(".btn").click(function() {
 	location.reload();
 });
 
+var emptyVar;
+
 
 
 
