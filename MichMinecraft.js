@@ -112,13 +112,17 @@ selectedDiv = function () {
 	var divSelected = $(this).attr("class");
 	console.log(divSelected);
 
+	var x = $(this).data("x");
+	var y = $(this).data("y");
+
 	if (divSelected != 'box skyblue') {
 
 		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {	
 			// ($('.backgroundIndicator').data(divSelected));
 			// console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirt');
-			($('.backgroundIndicator').removeClass("dirt"));
+			// ($('.backgroundIndicator').removeClass("dirt"));
+			
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
@@ -127,6 +131,7 @@ selectedDiv = function () {
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
 			($('.backgroundIndicator').removeClass("dirtWithGrass"));
+			
 		}
 
 		else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
