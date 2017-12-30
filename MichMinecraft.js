@@ -15,7 +15,7 @@ var toolNames = ["pickaxe", "shovel", "axe"];
 var toolPics = ["Pickaxe.png", "Shovel.png", "Axe.png"];
 
 function toolCreator() {
-	for (var i=0; i < toolNames.length; i++) {
+	for (var i = 0; i < toolNames.length; i++) {
 		var div = $("<div/>");
 		div.addClass("tool " + toolNames[i]);
 		var image = $("<img/>");
@@ -33,7 +33,7 @@ function toolCreator() {
 
 //Initalized the variable and created click event
 var currentTool;
-var hasTool; 
+var hasTool;
 
 function toolClick() {
 	currentTool = $(this);
@@ -113,29 +113,24 @@ selectedDiv = function () {
 
 	if (divSelected != 'box skyblue') {
 
-		if((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
-				$(this).removeClass('dirt');
-				console.log(divSelected);
-			}
-
-			else if((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
-				$(this).removeClass('rock');
-				console.log(divSelected);
-			}
+		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
+			$(this).removeClass('dirt');
+			console.log(divSelected);
+		}
 
 		
 
-		else if((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
+		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
 		}
 
-		else if((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
+		else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
 			$(this).removeClass('treeBark');
 			console.log(divSelected);
 		}
 
-		else if((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
+		else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
 		}
