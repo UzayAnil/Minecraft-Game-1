@@ -2,6 +2,36 @@ body {
 	background: black;
 }
 
+
+#minecraftModal {
+	background: url("MinecraftBackground.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+    width: auto;
+    height:auto;
+}
+
+#minecraftLogo {
+	background: url("MinecraftLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:900px;
+    height:188px;
+    margin-top: 100px;
+}
+
+.buttonContainer {
+	margin-top: 50px;
+}
+
+.button.beginButton{
+	width: 275px;
+	margin-top: 50px;
+	background: red
+	
+}
+
 .box {
 	height: 35px;
 	width: 35px;
@@ -10,7 +40,7 @@ body {
 	margin-top: -5px;
 }
 
-.btn {
+.button {
 	height: 50px;
 	width: 150px;
 	background: red;
@@ -19,6 +49,7 @@ body {
 	color: black;
 	margin-top: 20px;
 	margin-left: 27%;
+	cursor: pointer;
 }
 
 .modal {

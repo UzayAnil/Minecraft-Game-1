@@ -103,6 +103,7 @@ mineCraft.createBoard = function () {
 };
 
 $(document).ready(function () {
+	$("#minecraftModal").modal('show');
 	mineCraft.init();
 
 });
@@ -187,7 +188,5 @@ $("span").click(function() {
 $("#startBtn").click(function() {
 	location.reload();
 });
-
-
 
 

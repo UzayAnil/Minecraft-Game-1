@@ -12,12 +12,13 @@
 
 <body>
 
+
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-3">
 				<div id="tools"></div>
-				<button id="tutorialBtn" class="btn" type="button">Tutorial</button>
-				<button id="startBtn" class="btn" type="button">New game</button>
+				<button id="tutorialModalButton" class="button" type="button">Tutorial</button>
+				<button id="startButton" class="button" type="button">New game</button>
 				<br><br><br><br>
 				<div class="textToolBar" id="toolHeaderText">Tools<br><br> 
 					<br>
@@ -27,6 +28,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="modal fade bd-example-modal-sm" id="minecraftModal">
+		<div class="modal-dialog modal-lg text-center">
+			<div id="minecraftLogo"></div>
+			<div class="buttonContainer">
+				<button id="play" class="button beginButton btn-lg">Begin mining</button>
+				<button id="tutorial" class="button beginButton btn-lg">Tutorial</button>
+			</div>
+		</div>
 	</div>
 
 <div id="myModal" class="modal">
