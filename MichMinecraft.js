@@ -185,5 +185,3 @@ $("#beginGameButton").click(function() {
 
 
 
-
-
