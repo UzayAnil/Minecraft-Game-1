@@ -137,6 +137,11 @@ selectedDiv = function () {
 			$(this).removeClass('rock');
 			console.log(divSelected);
 		}
+
+		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
+			$(this).removeClass('justGrass');
+			console.log(divSelected);
+		}
 	}
 }
 
