@@ -118,10 +118,7 @@ selectedDiv = function () {
 			console.log(divSelected);
 		}
 
-		else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
-			$(this).removeClass('rock');
-			console.log(divSelected);
-		}
+		
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
 			$(this).removeClass('dirtWithGrass');
@@ -137,12 +134,6 @@ selectedDiv = function () {
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
 		}
-
-		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
-			$(this).removeClass('justGrass');
-			console.log(divSelected);
-		}
-
 	}
 }
 
@@ -151,11 +142,5 @@ $(".btn").click(function() {
 });
 
 var emptyVar;
-
-
-
-
-
-
 
 
