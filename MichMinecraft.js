@@ -30,6 +30,7 @@ function toolCreator() {
 	}
 }
 
+var emptyVariable = [];
 
 //Initalized the variable and created click event
 var currentTool;
