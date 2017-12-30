@@ -118,6 +118,7 @@ selectedDiv = function () {
 			// ($('.backgroundIndicator').data(divSelected));
 			// console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirt');
+			($('.backgroundIndicator').removeClass("dirt"));
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
@@ -125,6 +126,7 @@ selectedDiv = function () {
 			// console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
+			($('.backgroundIndicator').removeClass("dirtWithGrass"));
 		}
 
 		else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
@@ -132,6 +134,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeBark');
 			console.log(divSelected);
+			($('.backgroundIndicator').removeClass("treeBark"));
 		}
 
 		else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
@@ -139,6 +142,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
+			($('.backgroundIndicator').removeClass("treeLeaf"));
 		}
 
 		else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
@@ -146,6 +150,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('rock');
 			console.log(divSelected);
+			($('.backgroundIndicator').removeClass("rock"));
 		}
 
 		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
@@ -153,6 +158,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('justGrass');
 			console.log(divSelected);
+			($('.backgroundIndicator').removeClass("justGrass"));
 		}
 	}
 }
