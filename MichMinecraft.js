@@ -113,33 +113,38 @@ selectedDiv = function () {
 
 	if (divSelected != 'box skyblue') {
 
-		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
-			($('.backgroundIndicator').addClass('box skyblue dirt'));
+		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {	
+			($('.backgroundIndicator').addClass('dirt'));
 			$(this).removeClass('dirt');
-			
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
+			($('.backgroundIndicator').addClass('dirtWithGrass'));
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
+			($('.backgroundIndicator').addClass('treeBark'));
 			$(this).removeClass('treeBark');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
+			($('.backgroundIndicator').addClass('treeLeaf'));
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
+			($('.backgroundIndicator').addClass('rock'));
 			$(this).removeClass('rock');
 			console.log(divSelected);
 		}
 
 		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
+			($('.backgroundIndicator').addClass('justGrass'));
+			console.log($('.backgroundIndicator'));
 			$(this).removeClass('justGrass');
 			console.log(divSelected);
 		}
