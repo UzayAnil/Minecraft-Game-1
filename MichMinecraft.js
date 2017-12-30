@@ -146,6 +146,10 @@ selectedDiv = function () {
 	}
 }
 
+$(".btn").click(function() {
+	location.reload();
+});
+
 
 
 
