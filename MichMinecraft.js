@@ -123,7 +123,7 @@ selectedDiv = function () {
 				console.log(divSelected);
 			}
 
-		}
+		
 
 		else if((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
 			$(this).removeClass('dirtWithGrass');
@@ -139,13 +139,6 @@ selectedDiv = function () {
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
 		}
+	}
 
 }
-
-
-
-
-
-
-
-
