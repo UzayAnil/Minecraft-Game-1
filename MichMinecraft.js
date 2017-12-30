@@ -30,14 +30,15 @@ function toolCreator() {
 	}
 }
 
-var emptyVariable = [];
-
 //Initalized the variable and created click event
 var currentTool;
+var hasTool; 
 
 function toolClick() {
 	currentTool = $(this);
-	currentTool.css("background-color", "blue")
+	currentTool.css("background-color", "blue");
+	hasTool = currentTool.attr("class");
+	console.log(hasTool);
 }
 
 //adding color indicator 
@@ -84,7 +85,7 @@ mineCraft.createBoard = function () {
 				box.removeClass("skyblue");
 				box.addClass("cloud");
 			}
-			box.on("click", whatever);
+			box.on("click", selectedDiv);
 			$('#mainBoard').append(box);
 
 			mineCraft.matrix[x][y] = box;
@@ -105,8 +106,20 @@ $(document).ready(function () {
 
 });
 
-whatever = function () {
-	console.log("whatever");
+selectedDiv = function () {
+	var divSelected = $(this).attr("class");
+	console.log(divSelected);
+
+	// if (divSelected != 'box') {
+
+		if(divSelected == 'dirt') {
+			if (hasTool == 'tool shovel') {
+				console.log(hasTool);
+				divSelected.removeClass('dirt');
+			}
+
+		}
+	// }
 }
 
 
