@@ -114,8 +114,9 @@ selectedDiv = function () {
 	if (divSelected != 'box skyblue') {
 
 		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
+			($('.backgroundIndicator').addClass('box skyblue dirt'));
 			$(this).removeClass('dirt');
-			console.log(divSelected);
+			
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
@@ -149,6 +150,6 @@ $(".btn").click(function() {
 	location.reload();
 });
 
-var emptyVar;
+
 
 
