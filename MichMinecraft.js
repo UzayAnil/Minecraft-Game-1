@@ -100,7 +100,6 @@ mineCraft.createBoard = function () {
 			mineCraft.matrix[i][j].addClass("dirt");
 		}
 	}
-
 };
 
 $(document).ready(function () {
@@ -108,29 +107,36 @@ $(document).ready(function () {
 
 });
 
+// addDirt = function(){
+	// for (var x = 0; x < mineCraft.matrix.length; x++) {
+	// 	for (var y = 0; y < mineCraft.matrix.length; y++) {
+			// var x = $('div').position()
+			// console.log(x);
+			// x.addClass('dirt');
+	// 	}
+	// }
+// };
+
 selectedDiv = function () {
 	var divSelected = $(this).attr("class");
 	console.log(divSelected);
 
-	var x = $(this).data("x");
-	var y = $(this).data("y");
 
 	if (divSelected != 'box skyblue') {
 
 		if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {	
-			// ($('.backgroundIndicator').data(divSelected));
-			// console.log($('.backgroundIndicator'));
+			($('.backgroundIndicator').addClass('dirt'));
+			console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirt');
-			// ($('.backgroundIndicator').removeClass("dirt"));
-			
+			// $('.backgroundIndicator').on("click", addDirt);
 		}
 
 		else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
-			// ($('.backgroundIndicator').data(divSelected));
-			// console.log($('.backgroundIndicator'));
+			($('.backgroundIndicator').data(divSelected));
+			console.log($('.backgroundIndicator'));
 			$(this).removeClass('dirtWithGrass');
 			console.log(divSelected);
-			($('.backgroundIndicator').removeClass("dirtWithGrass"));
+			// ($('.backgroundIndicator').removeClass("dirtWithGrass"));
 			
 		}
 
@@ -139,7 +145,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeBark');
 			console.log(divSelected);
-			($('.backgroundIndicator').removeClass("treeBark"));
+			// ($('.backgroundIndicator').removeClass("treeBark"));
 		}
 
 		else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
@@ -147,7 +153,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('treeLeaf');
 			console.log(divSelected);
-			($('.backgroundIndicator').removeClass("treeLeaf"));
+			// ($('.backgroundIndicator').removeClass("treeLeaf"));
 		}
 
 		else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
@@ -155,7 +161,7 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('rock');
 			console.log(divSelected);
-			($('.backgroundIndicator').removeClass("rock"));
+			// ($('.backgroundIndicator').removeClass("rock"));
 		}
 
 		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
@@ -163,12 +169,22 @@ selectedDiv = function () {
 			console.log($('.backgroundIndicator'));
 			$(this).removeClass('justGrass');
 			console.log(divSelected);
-			($('.backgroundIndicator').removeClass("justGrass"));
+			// ($('.backgroundIndicator').removeClass("justGrass"));
 		}
 	}
 }
 
-$(".btn").click(function() {
+$("#tutorialBtn").click(function() {
+	$('.modal').css("display", "block");
+
+})
+
+$("span").click(function() {
+	$('.modal').css("display", "none");
+
+})
+
+$("#startBtn").click(function() {
 	location.reload();
 });
 

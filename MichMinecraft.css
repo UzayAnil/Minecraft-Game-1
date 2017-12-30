@@ -14,10 +14,55 @@ body {
 	height: 50px;
 	width: 150px;
 	background: red;
+	display: block;
 	font-family: 'Press Start 2P', cursive;
 	color: black;
 	margin-top: 20px;
+	margin-left: 27%;
 }
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: rgb(0,0,0);
+	background:rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+	background: black;
+	color: white;
+	margin: 15% auto;
+	padding: 20px;
+	border: 3px solid red;
+	width: 80%;
+}
+
+.close{
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.tutorialText {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	text-align: center;
+}
+
 
 .toolBackgroundColor {
 	background: blue;
