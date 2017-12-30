@@ -24,19 +24,24 @@ function toolCreator() {
 		div.append(image);
 		var toolText = $("<p/>");
 		toolText.text(toolNames[i]);
-		$("#tools").append(div);
+		$(".textToolBar").append(div);
 		div.append(toolText);
 		div.on("click", toolClick);
 	}
 }
 
+
+//Initalized the variable and created click event
+var currentTool;
+
 function toolClick() {
-	console.log("Hello!");
+	currentTool = $(this);
+	currentTool.css("background-color", "blue")
 }
 
 //adding color indicator 
 var colorIndicator = $("<div/>")
-	.addClass("box skyblue backgroundIndicator")
+	.addClass("box skyblue backgroundIndicator");
 $(".col-lg-3").append(colorIndicator);
 
 mineCraft.createBoard = function () {
