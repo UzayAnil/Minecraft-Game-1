@@ -27,6 +27,7 @@ function toolCreator() {
 		$(".textToolBar").append(div);
 		div.append(toolText);
 		div.on("click", toolClick);
+		$("p").css("font-size", "10px");
 	}
 }
 
@@ -110,16 +111,15 @@ selectedDiv = function () {
 	var divSelected = $(this).attr("class");
 	console.log(divSelected);
 
-	// if (divSelected != 'box') {
+	// if (divSelected != 'skyblue') {
 
-		if(divSelected == 'dirt') {
-			if (hasTool == 'tool shovel') {
-				console.log(hasTool);
-				divSelected.removeClass('dirt');
+		if((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {
+				$(this).removeClass('dirt');
+				console.log(divSelected);
 			}
 
-		}
-	// }
+		// }
+
 }
 
 

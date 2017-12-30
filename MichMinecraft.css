@@ -16,6 +16,7 @@ body {
 	background: red;
 	font-family: 'Press Start 2P', cursive;
 	color: black;
+	margin-top: 20px;
 }
 
 #mainBoard {
@@ -26,10 +27,18 @@ body {
 
 .backgroundIndicator {
 	border: 2px solid white;
-	margin-right: 14px;
+	margin-top: 20px;
 }
 
 .textToolBar {
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	font-size: 10px;
+}
+
+#toolHeaderText {
+	font-size: 20px;
 	color: white;
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
@@ -86,8 +95,7 @@ body {
 
 .toolImage {
 	width: 50px;
+	margin-left: 10px;
+	text-align: center;
 }
 
-.tool {
-	width: 50px;
-}
