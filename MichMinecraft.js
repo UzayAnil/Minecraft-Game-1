@@ -103,6 +103,7 @@ mineCraft.createBoard = function () {
 };
 
 $(document).ready(function () {
+	$("#minecraftModal").modal('show');
 	mineCraft.init();
 
 });
@@ -165,10 +166,9 @@ selectedDiv = function () {
 	}
 }
 
-$("#tutorialBtn").click(function() {
+$("#tutorialModalButton").click(function() {
 	$('.modal').css("display", "block");
-
-})
+});
 
 $("span").click(function() {
 	$('.modal').css("display", "none");
@@ -177,6 +177,12 @@ $("span").click(function() {
 $("#startBtn").click(function() {
 	location.reload();
 });
+
+$("#beginGameButton").click(function() {
+	$("#myModalIntro").css("display", "none");
+
+})
+
 
 
 

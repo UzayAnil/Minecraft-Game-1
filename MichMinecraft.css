@@ -2,6 +2,61 @@ body {
 	background: black;
 }
 
+
+/* #minecraftModal {
+	background: url("MinecraftBackground.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+    width: auto;
+	height:auto;
+	display: block;
+} */
+
+.logoimg {
+	background: url("MinecraftLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:900px;
+    height:188px;
+	margin-top: -20px;
+	margin-left: 17%;
+	
+}
+
+.modalIntroPage {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: url("MinecraftBackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-content-Intro {
+	background:transparent;
+	margin: 15% auto;
+	padding: 20px;
+	/* background: url("MinecraftBackground.png"); */
+	/* border: 3px solid red; */
+	width: 100%;
+	height: 100%;
+}
+
+#beginGameButton {
+	width: 200px;
+	height: 100px;
+	margin-left: 41%;
+	border: 1px solid brown;
+}
+
+
 .box {
 	height: 35px;
 	width: 35px;
@@ -10,7 +65,7 @@ body {
 	margin-top: -5px;
 }
 
-.btn {
+.button {
 	height: 50px;
 	width: 150px;
 	background: red;
@@ -19,6 +74,7 @@ body {
 	color: black;
 	margin-top: 20px;
 	margin-left: 27%;
+	cursor: pointer;
 }
 
 .modal {
