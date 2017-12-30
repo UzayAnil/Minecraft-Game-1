@@ -170,18 +170,20 @@ $("#tutorialModalButton").click(function() {
 	$('.modal').css("display", "block");
 });
 
+$("#startButton").click(function() {
+	location.reload();
+});
+
 $("span").click(function() {
 	$('.modal').css("display", "none");
 })
 
-$("#startBtn").click(function() {
-	location.reload();
-});
 
 $("#beginGameButton").click(function() {
 	$("#myModalIntro").css("display", "none");
 
 })
+
 
 
 
