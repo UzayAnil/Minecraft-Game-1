@@ -88,7 +88,7 @@ mineCraft.createBoard = function () {
             }
             box.on("click", selectedDiv);
             $('#mainBoard').append(box);
-
+            
             mineCraft.matrix[x][y] = box;
         }
     }
@@ -107,59 +107,80 @@ $(document).ready(function () {
 });
 
 selectedDiv = function () {
-    var divSelected = $(this).attr("class");
+
+    if (hasTool == 'tool pickaxe' || hasTool == 'tool axe' || hasTool == 'tool shovel') {
+        var divSelected = $(this).attr("class");
 
 
-    if (divSelected != 'box skyblue') {
+        if (divSelected != 'box skyblue') {
 
-        if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {    
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('dirt');
-            removeClassesFromBackGroundIndicatorDiv();
-			$('.backgroundIndicator').addClass('dirt');
-        }
+            if ((divSelected === 'box skyblue dirt') && (hasTool === 'tool shovel')) {    
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('dirt');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('dirt');  
+            }
 
-        else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('dirtWithGrass');
-            removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('dirtWithGrass');
+            else if ((divSelected === 'box skyblue dirtWithGrass') && (hasTool === 'tool shovel')) {
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('dirtWithGrass');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('dirtWithGrass');
+            }
+
+            else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('treeBark');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('treeBark');
+            }
+
+            else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('treeLeaf');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('treeLeaf');
+            }
             
-        }
+            else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('justGrass');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('justGrass');
+            }
 
-        else if ((divSelected === 'box skyblue treeBark') && (hasTool === 'tool axe')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('treeBark');
-            removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('treeBark');
+            else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
+                ($('.backgroundIndicator').data(divSelected));
+                $(this).removeClass('rock');
+                removeClassesFromBackGroundIndicatorDiv();
+                $('.backgroundIndicator').addClass('rock');
+            }
         }
+        else {
+            var selectedColor = $('.backgroundIndicator');
+            
+            removeClassesFromBlockDiv(this);
 
-        else if ((divSelected === 'box skyblue treeLeaf') && (hasTool === 'tool axe')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('treeLeaf');
-            removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('treeLeaf');
-		}
-		
-		else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool axe')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('justGrass');
-            removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('justGrass');
-        }
+            if (selectedColor.hasClass('dirt')) {
+                $(this).addClass("dirt");
+            }
+            else if (selectedColor.hasClass('dirtWithGrass')) {
+                $(this).addClass("dirtWithGrass");
+            }
+            else if (selectedColor.hasClass('treeBark')) {
+                $(this).addClass("treeBark");
+            }
+            else if (selectedColor.hasClass('treeLeaf')) {
+                $(this).addClass("box skyblue treeLeaf");
+            }
+            else if (selectedColor.hasClass("justGrass")) {
+                $(this).addClass("box skyblue justGrass");
+            }
 
-        else if ((divSelected === 'box skyblue rock') && (hasTool === 'tool pickaxe')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('rock');
+            else if (selectedColor.hasClass('rock')) {
+                $(this).addClass("box skyblue rock");
+            }
             removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('rock');
-        }
-
-        else if ((divSelected === 'box skyblue justGrass') && (hasTool === 'tool pickaxe')) {
-            ($('.backgroundIndicator').data(divSelected));
-            $(this).removeClass('justGrass');
-            removeClassesFromBackGroundIndicatorDiv();
-            $('.backgroundIndicator').addClass('justGrass');
         }
     }
 }
@@ -171,6 +192,15 @@ function removeClassesFromBackGroundIndicatorDiv() {
     $('.backgroundIndicator').removeClass('treeLeaf');
     $('.backgroundIndicator').removeClass('rock');
     $('.backgroundIndicator').removeClass('justGrass');
+}
+
+function removeClassesFromBlockDiv(element) {
+    $(element).removeClass('dirt');
+    $(element).removeClass('dirtWithGrass');
+    $(element).removeClass('treeBark');
+    $(element).removeClass('treeLeaf');
+    $(element).removeClass('rock');
+    $(element).removeClass('justGrass');
 }
 
 
@@ -192,3 +222,7 @@ $("#beginGameButton").click(function() {
 	$("#myModalIntro").css("display", "none");
 
 })
+
+$(".backgroundIndicator").on("click", function() {
+    console.log("fff")
+});
